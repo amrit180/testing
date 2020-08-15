@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+
+<% webinar.forEach(function(webinar){ %>
+
+    <div class="card" style="width: 18rem;display: inline-block;">
+        <img src="<%= webinar.image %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= webinar.title %></h5>
+          <a href="/webinars/<%= webinar._id %>" class="btn btn-primary">View Webinar</a>
+        </div>
+      </div>
+
+
+
+<% }) %>
+
+
+<%- include("partials/footer.ejs") %>

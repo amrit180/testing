@@ -1,0 +1,207 @@
+<%- include("partials/header.ejs") %>
+
+<div class="backgroundimgas">
+    <h1 class="title">V3 Webinar</h1>
+    <h5 class="subtitle"> Here Business <br /> Get results
+        <br /> from <span class="web">Webinar</span></h3>
+        <a href="/contactus" class="button btn "> Contact Us!</a>
+</div>
+
+<div class="blockas">
+
+    <div class="blogs owl-carousel">
+        <div class="blog">
+            <img src="/images/bg.jpg" alt="">
+            <div class="blog-description">
+                <div class="categorie">Food</div>
+                <h2 class="title">Lorem ipsum dolor sit amet</h2>
+                <div class="date">Jan 13 2020</div>
+                <a href="/blogs/5f36ad787963e55504d72ff9" class="btnsa">Read More</a>
+            </div>
+        </div>
+
+        <div class="blog">
+            <img src="/images/bg.jpg" alt="">
+            <div class="blog-description">
+                <div class="categorie">Cars</div>
+                <h2 class="title">Lorem ipsum dolor sit amet</h2>
+                <div class="date">Jan 13 2020</div>
+                <a href="#" class="btnsa">Read More</a>
+            </div>
+        </div>
+
+        <div class="blog">
+            <img src="/images/bg.jpg" alt="">
+            <div class="blog-description">
+                <div class="categorie">Coding</div>
+                <h2 class="title">Lorem ipsum dolor sit amet</h2>
+                <div class="date">Jan 13 2020</div>
+                <a href="#" class="btnsa">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+        items: 2,
+        margin: 20,
+        loop: true,
+        center: true,
+        dots: false
+    });
+</script>
+
+
+
+
+
+
+
+
+
+<style>
+    .blockas {}
+
+    .backgroundimgas {
+        background: linear-gradient(to right bottom, #cccccc41, #cccccca9), url(/images/weiar.png);
+        background-size: cover;
+        width: 100%;
+        min-height: 90vh;
+        margin-bottom: 20%;
+    }
+
+    .title {
+        position: relative;
+        padding-top: 20%;
+        padding-left: 4%;
+    }
+
+    .subtitle {
+        position: relative;
+
+        padding-left: 4%;
+    }
+
+    .button {
+        margin-left: 4%;
+        width: 200px;
+        height: 50px;
+        color: white;
+        font-size: 25px;
+        border-radius: 5px;
+        background-color: black;
+    }
+
+    .button:hover {
+        color: black;
+        background-color: white;
+        font-weight: 700;
+    }
+
+    .web {
+        font-size: 25px;
+    }
+
+
+    .blogs {
+        position: relative;
+
+        transform: translateY(-50%);
+    }
+
+    .blog {
+        overflow: hidden;
+        position: relative;
+        height: 300px;
+        cursor: pointer;
+    }
+
+    .blog img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .blog-description {
+        position: absolute;
+        bottom: -40px;
+        background: #333333ca;
+        width: 100%;
+        padding: 40px;
+        transition: .3s linear;
+    }
+
+    .blog:hover .blog-description {
+        bottom: 0;
+    }
+
+    .categorie {
+        display: inline-block;
+        color: #e77f67;
+        font-size: 18px;
+        position: relative;
+        padding: 0 22px;
+    }
+
+    .categorie::before {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 2px;
+        background: #e77f67;
+        left: 0;
+        top: 13px;
+    }
+
+    .categorie::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 2px;
+        background: #e77f67;
+        right: 0;
+        top: 13px;
+    }
+
+    .title {
+        color: #fff;
+        font-weight: 500;
+        margin: 5px 0;
+    }
+
+    .date {
+        font-style: italic;
+        color: #e77f67;
+        margin-bottom: 20px;
+    }
+
+    .btnsa {
+        display: inline-block;
+        color: #e77f67;
+        text-decoration: none;
+        border: 1px solid #e77f67;
+        padding: 6px 20px;
+        opacity: 0;
+        transition: .3s linear;
+    }
+
+    .blog:hover .btnsa {
+        opacity: 1;
+    }
+
+    .btnsa:hover {
+        color: #fff;
+        background: #e77f67;
+    }
+
+    .owl-stage {
+        display: flex !important;
+    }
+</style>
+
+
+
+
+<%- include("partials/footer.ejs") %>

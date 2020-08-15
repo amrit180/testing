@@ -1,0 +1,48 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+    <div class="jumbotron class">
+        <h1 class="display-4"><%= blog.blogtitle %></h1>
+        <div class="container">
+            <img src="<%= blog.blogimage %>" class="imgblog">
+        </div>
+        <h3 class="h3tag"><%= blog.blogdescription %> </h3>
+        <% if(currentuser){ %>
+        <a href="/blogs/<%=blog._id %>/edit" class="btn btn-success" style="display: inline-block;">Edit Blog</a>
+        <form id="delete-form" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-xs btn-danger">Delete</button>
+        </form>
+        <% } %>
+    </div>
+</div>
+
+
+<style>
+    .h3tag {
+        margin-top: 20px;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .display-4 {
+        text-align: center;
+        border-bottom: black solid 2px;
+    }
+
+    .class {
+
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgblog {
+        max-width: 50%;
+        max-height: 50%;
+        margin-left: 25%;
+
+    }
+</style>
+
+
+
+<%- include("partials/footer.ejs") %>

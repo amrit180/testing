@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Add Webinar</h1>
+
+
+    <form action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
+    <input type="text" placeholder="Heading of Webinar"  value="<%= blog.blogtitle %>" name="blog[blogtitle]">
+    <input type="text" placeholder="URL of Image"  value="<%= blog.blogimage %>" name="blog[blogimage]">
+    <input type="text" placeholder="Description" value="<%= blog.blogdescription %>"  name="blog[blogdescription]">
+    <button type="submit">Submit</button>
+
+
+</form>
+
+<%- include("partials/footer.ejs") %>

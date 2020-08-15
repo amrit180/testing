@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Add Blog</h1>
+
+<form action="/webinars" method="POST">
+
+    <input type="text" placeholder="Heading of Webinar" name="title">
+    <input type="text" placeholder="URL of Image" name="image">
+    <input type="text" placeholder="Description" name="description">
+    <button type="submit">Submit</button>
+
+
+</form>
+
+<%- include("partials/footer.ejs") %>

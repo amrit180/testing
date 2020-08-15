@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  <!--cdn for alert()sweet-alert-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!--bootstrap cdn-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <!--font awsome cdn-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!--javascript and jquwry cdn-->
+
+  <!--image of title-->
+  <link rel="shortcut icon" type="image/jpg" href="/images/tablogo.png">
+  <title>V3 Webinar</title>
+</head>
+<!--body starts-->
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="/">
+      <img src="/images/logo.png" alt="" loading="lazy" class="logos">
+
+      <span class="logo-header">V3 Webinar</span><span class="line">|</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/webinars">Webinars</a>
+        <a class="nav-link" href="/blogs">Blog</a>
+        <a class="nav-link" href="/contactus">Contact Us</a>
+        <% if(currentuser && currentuser.username==="kislay") { %>
+        <a class="nav-link" href="/blogs/new">New Blog</a>
+        <a class="nav-link" href="/webinars/new">New Webinar</a>
+        <a class="nav-link" href="/logout">Logout</a>
+        <% } %>
+      </div>
+    </div>
+  </nav>
+  <style>
+    .logos {
+      margin: 0 0 0 30px !important;
+      width: 60px !important;
+      height: 60px;
+    }
+
+    .logo-header {
+      margin-left: 10px;
+
+
+
+    }
+
+    .line {
+      font-size: 30px;
+      /* margin: 0; */
+      margin-left: 30px;
+    }
+
+    .nav-link {
+      margin-left: 70px;
+
+      color: #6a686a !important;
+
+    }
+
+    .nav-link:hover {
+      border-bottom: red solid 2px;
+      /* padding: 0; */
+      transition: border-bottom .8 ease-in;
+      /* margin: 0; */
+    }
+
+    nav {
+      background-color: #f2f2f2;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  </style>

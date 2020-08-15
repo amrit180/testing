@@ -1,0 +1,79 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+    <h1 class="h1as">Contact Us</h1>
+    <form action="/contactus" method="POST">
+        <div class="but">
+            <label for="name">Name</label>
+            <input type="text" class="txta" name="user_name" id="name">
+        </div>
+        <div class="but">
+            <label for="mail">E-mail</label>
+            <input id="mail" class="txta" name="user_mail">
+        </div>
+
+        <div class="but">
+            <label for="msg">Company Name</label>
+            <input type="text" class="txta" name="user_message" id="msg">
+        </div>
+
+        <div class="but">
+            <button type="submit" class=" button btn">Submit</button>
+        </div>
+
+    </form>
+</div>
+<style>
+    .h1as {
+        text-align: center;
+    }
+
+    .but {
+        margin-bottom: 30px;
+    }
+
+    .button {
+        margin-left: 4%;
+        width: 200px;
+        height: 50px;
+        color: white;
+        font-size: 25px;
+        border-radius: 5px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button:hover {
+        color: black;
+        background-color: white;
+        font-weight: 700;
+    }
+
+    .txta {
+        flex: 1;
+        padding: 18px 40px;
+        font-size: 16px;
+        color: whitesmoke;
+        background: #ddd;
+        border: none;
+        font-weight: 700;
+        outline: none;
+        border-radius: 10px;
+        width: 100%;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        margin-top: 15%;
+    }
+</style>
+
+
+
+
+<%- include("partials/footer.ejs") %>

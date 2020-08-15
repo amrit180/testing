@@ -1,0 +1,193 @@
+<%- include("partials/header.ejs") %>
+
+<% blog.forEach(function(blog){ %>
+
+<div class="blog-post">
+  <div class="blog-post-img">
+    <img src="<%= blog.blogimage %>" class="card-img-top" alt="...">
+  </div>
+  <div class="blog-post-info">
+    <div class="blog-post-title">
+      <h5 class="card-title"><%= blog.blogtitle %></h5>
+    </div>
+    <div class="blog-post-date">
+      <span>Friday</span>
+      <span>June 12 2020</span>
+    </div>
+    <div class="blog-post-desc">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+    </div>
+    <a href="/blogs/<%= blog._id %>" class="blog-post-read-more">View Blog</a>
+  </div>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: gray;
+  }
+
+  .blog-post {
+    display: flex;
+    flex-direction: row;
+    margin: 10rem;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .blog-post-img {
+    flex: 1;
+    padding: 2rem 2rem 2rem 0rem;
+  }
+
+  .blog-post-img>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3rem;
+    object-fit: cover;
+    transform: translateX(-50px);
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .5);
+  }
+
+  .blog-post-info {
+    flex: 2;
+    padding: 2rem;
+  }
+
+  .blog-post-title h2 {
+    color: #673AB7;
+    text-transform: uppercase;
+  }
+
+  .blog-post-read-more a {
+    cursor: pointer;
+    text-decoration: none;
+    font-style: normal;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #673AB7;
+    color: #673AB7 !important;
+    box-shadow: 0 0.05em 0.1em rgba(0, 0, 0, .25);
+  }
+
+  .blog-post-read-more a:hover {
+    transition: .5s;
+    background-color: #673AB7;
+    border: 1px solid #673AB7;
+    color: #fff !important;
+    text-decoration: none;
+  }
+
+  /*Extra small devices (phones , 600px and down)*/
+  @media only screen and (max-width: 600px) {
+    .blog-post {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    .blog-post-img {
+      flex: 1;
+      padding: 0rem 1rem 0rem 1rem;
+    }
+
+    .blog-post-img>img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.3rem;
+      object-fit: cover;
+      transform: translateY(-20px);
+      box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .5);
+    }
+
+    .blog-post-info {
+      flex: 2;
+      padding: 0rem 1rem 2rem 1rem;
+    }
+  }
+
+  /*Medium devices (tablets landscape)*/
+
+  @media only screen and (min-width: 768px) {
+    .blog-post {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    .blog-post-img {
+      flex: 1;
+      padding: 0rem 1rem 0rem 1rem;
+    }
+
+    .blog-post-img>img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.3rem;
+      object-fit: cover;
+      transform: translateY(-20px);
+      box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .5);
+    }
+
+    .blog-post-info {
+      flex: 2;
+      padding: 0rem 1rem 2rem 1rem;
+    }
+
+  }
+
+
+  /*Large devices (laptops)*/
+  @media only screen and (min-width: 992px) {
+    .blog-post {
+      display: flex;
+      flex-direction: row;
+      margin: 10rem;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    .blog-post-img {
+      flex: 1;
+      padding: 2rem 2rem 2rem 0rem;
+    }
+
+    .blog-post-img>img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.3rem;
+      object-fit: cover;
+      transform: translateX(-50px);
+      box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, .5);
+    }
+
+    .blog-post-info {
+      flex: 2;
+      padding: 2rem;
+    }
+
+  }
+</style>
+
+<% }) %>
+
+
+<%- include("partials/footer.ejs") %>

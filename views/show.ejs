@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<div class="jumbotron">
+    <h1 class="display-4"><%= webinar.title %></h1>
+    <div class="container">
+        <img src="<%= webinar.image %>" style="width: 100%;">
+    </div>
+    <h3><%=webinar.description %> </h3>
+    <% if(currentuser){ %>
+    <a href="/webinars/<%=webinar._id %>/edit" class="btn btn-success" style="display: inline-block;">Edit Webinar</a>
+<form id="delete-form" action="/webinars/<%= webinar._id %>?_method=DELETE" method="POST">
+<button class="btn btn-xs btn-danger">Delete</button>
+</form>
+<% } %>
+</div>
+
+
+
+
+
+<%- include("partials/footer.ejs") %>
