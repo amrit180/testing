@@ -1,25 +1,19 @@
 <%- include("partials/header.ejs") %>
 <div class="container">
     <h1 class="h1as">Contact Us</h1>
-    <form action="/contactus" method="POST">
-        <div class="but">
-            <label for="name">Name</label>
-            <input type="text" class="txta" name="user_name" id="name">
-        </div>
-        <div class="but">
-            <label for="mail">E-mail</label>
-            <input id="mail" class="txta" name="user_mail">
-        </div>
+    <form action="https://formspree.io/xvowynaa" method="POST">
+        <label>
+            Your email:
+            <input type="text" name="_replyto">
+        </label>
+        <label>
+            Your message:
+            <textarea name="message"></textarea>
+        </label>
 
-        <div class="but">
-            <label for="msg">Company Name</label>
-            <input type="text" class="txta" name="user_message" id="msg">
-        </div>
+        <!-- your other form fields go here -->
 
-        <div class="but">
-            <button type="submit" class=" button btn">Submit</button>
-        </div>
-
+        <button type="submit">Send</button>
     </form>
 </div>
 <style>

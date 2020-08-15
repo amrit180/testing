@@ -2,6 +2,10 @@
 var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
+const connectDB = require('./models/connection');
+
+connectDB();
+
 var methodoverride = require('method-override');
 var bodyparser = require('body-parser');
 var flash = require('connect-flash');
@@ -17,13 +21,7 @@ var env = require("dotenv");
 var contactUs = require("./routes/contact")
 
 var PORT = process.env.PORT || 3000;
-mongoose.connect("mongodb://localhost:27017/v3webinar", { useNewUrlParser: true, useUnifiedTopology: true }, function (error, success) {
-    if (!error) {
-        console.log("success")
-    } else {
-        console.log("error")
-    }
-});
+
 
 //CSS FILE AND IMAGES K LIYE
 app.use(express.static("public"));
