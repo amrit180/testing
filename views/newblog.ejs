@@ -3,13 +3,77 @@
 <h1>Add Blog</h1>
 
 <form action="/blogs" method="POST">
-
+    <!-- 
     <input type="text" placeholder="Heading of bLOG" name="blogtitle">
     <input type="text" placeholder="URL of Image" name="blogimage">
     <input type="text" placeholder="Description" name="blogdescription">
-    <button type="submit">Submit</button>
+    <button type="submit">Submit</button> -->
+    <div class="container">
+        <div class="buts">
+            <input class="txtc" type="text" placeholder="Heading of bLOG" name="blogtitle">
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" placeholder="URL of Image" name="blogimage">
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" placeholder="URL of intermediate Image" name="blogimage2">
+        </div>
+        <div class="but">
 
+            <input class="txtc" type="text" placeholder="Description" name="blogdescription">
+        </div>
+        <button class="btn button" type="submit">Submit</button>
+    </div>
 
 </form>
+
+<style>
+    .buts {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .but {
+        margin-bottom: 30px;
+    }
+
+    .txtc {
+        flex: 1;
+        padding: 18px 40px;
+        font-size: 16px;
+        color: orangered;
+        background: #ddd;
+        border: none;
+        font-weight: 700;
+        outline: none;
+
+        border-radius: 10px;
+        width: 100%;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button {
+        margin-left: 4%;
+        width: 200px;
+        height: 50px;
+        color: white;
+        font-size: 25px;
+        border-radius: 5px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button:hover {
+        color: black;
+        background-color: white;
+        font-weight: 700;
+    }
+</style>
 
 <%- include("partials/footer.ejs") %>

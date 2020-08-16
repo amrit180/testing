@@ -1,39 +1,143 @@
 <footer>
     <div class="footer-container">
         <div class="left-col">
-            <img src="logo.png" alt="" class="logo">
+            <img src="/images/logo.png" alt="" class="logo">
+
+            <h1 class="h1footer">THINK OUT OF THE BOX</h1>
+            <p class="para">Join 350,000+ fellow marketers to receive a summary of the latest marketing tips from across
+                the world directly to your inbox once a week.</p>
             <div class="social-media">
+
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-youtube"></i></a>
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <p class="rights-text">© 2020 All Rights Reserved.</p>
+
         </div>
 
         <div class="right-col">
-            <h1>Our Newsletter</h1>
-            <div class="border"></div>
-            <p>Enter Your Email to get our news and updates.</p>
-            <form action="" class="newsletter-form">
-                <input type="text" class="txtb" placeholder="Enter Your Email">
-                <input type="submit" class="btn button" value="submit">
-            </form>
+            <h1 class="h1footer">WHO WE ARE</h1>
+            <p class="para">V3 Media is a digital marketing and media company that provides brand awareness and lead
+                generation services worldwide</p>
+            <p class="para">The V3 Media team consists of over 300 marketing specialists, data science experts, and
+                martech engineers that execute and orchestrate over 2,800 campaigns each year.</p>
+
+
+
+
+
+        </div>
+        <div class="third">
+            <div class="sub">
+                <h1 class="h1footer">QUICK LINKS
+                </h1>
+                <a href="https://v3media.online/category/news/">
+                    <h5 class="h5footer">News</h5>
+                </a>
+                <a href="https://v3media.online/category/interviews/">
+                    <h5 class="h5footer">Interviews</h5>
+                </a>
+                <a href="https://v3media.online/category/insights/">
+                    <h5 class="h5footer"> Insights</h5>
+                </a>
+                <a href="https://v3media.online/category/news/">
+                    <h5 class="h5footer"> Insights</h5>
+                </a>
+                <a href="https://v3media.online/category/news/">
+                    <h5 class="h5footer"> V3Media RADAR</h5>
+                </a>
+                <a href="https://v3media.online/category/news/">
+                    <h5 class="h5footer"> Resources</h5>
+                </a>
+                <a href="https://v3media.online/category/news/">
+                    <h5 class="h5footer"> Events</h5>
+                </a>
+            </div>
+
+        </div>
+        <div class="fourth">
+            <h1 class="h1footer">OUR PUBLICATION SITE</h1>
+
+            <a href="https://v3techmedia.online/">
+                <h5 class="h5footer">Technology Professionals
+                </h5>
+            </a>
+            <a href="https://v3finmedia.online/">
+                <h5 class="h5footer">Finance Professionals
+
+                </h5>
+            </a>
+            <a href="https://v3hrmedia.online/">
+                <h5 class="h5footer"> HR Professionals
+                </h5>
+            </a>
+            <div class="margin">
+                <h1 class="h1footer">WHAT WE DO
+                </h1>
+                <p class="para">V3 Media provides performance-based marketing services by orchestrating multi-channel
+                    campaigns across email, web, mobile, voice, social, search, and display.</p>
+                <p class="para">Brands, agencies, platforms and publishers rely on V3 Media for lead acquisition at
+                    scale.
+                    Marketers from large enterprises to small and mid-sized companies use V3 Media experts for their
+                    marketing programs.</p>
+            </div>
+
+
+
+        </div>
+        <div>
+            <p class="rights-text">© 2020 All Rights Reserved.</p>
+            <p class="rights-text">Designed | Developed & Maintained by <a href="https://bili.co.in">Bili</a> </p>
         </div>
     </div>
 </footer>
-
+</div>
 <!-- ================================================================= -->
 
 <style>
+    .margin {
+        margin-top: 50px;
+    }
+
+    a .h5footer {
+        color: #001a21;
+        text-decoration: none;
+    }
+
+    a .h5footer:hover {
+        text-decoration: none;
+    }
+
     body {
         margin: 0;
         padding: 0;
         font-family: "Open Sans", sans-serif;
     }
 
+    .third {
+        margin-left: 50px;
+    }
+
+    .h1footer {
+        font-size: 20px;
+    }
+
+    .h5footer {
+        font-size: 16px;
+    }
+
+    .h5footer a {
+        text-decoration: none;
+    }
+
+    .para {
+        font-size: 14px;
+    }
+
     footer {
+        margin-top: 12%;
         background: #f1f1f1;
         padding: 90px 0;
     }
@@ -42,13 +146,12 @@
         max-width: 1300px;
         margin: auto;
         padding: 0 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap-reverse;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     .logo {
+
         width: 180px;
     }
 
@@ -68,8 +171,9 @@
         color: #fc5c65;
     }
 
-    .right-col h1 {
-        font-size: 26px;
+    .right-col {
+        margin-left: 50px;
+        margin-right: 50px;
     }
 
     .border {
@@ -139,6 +243,14 @@
             width: 100%;
             text-align: center;
         }
+
+        .footer-container {
+            max-width: 1300px;
+            margin: auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
 
@@ -148,6 +260,26 @@
             width: 100%;
             margin-top: 20px;
         }
+
+        .footer-container {
+            max-width: 1300px;
+            margin: auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+
+    @media screen and (max-width: 400) {
+        .footer-container {
+            max-width: 1300px;
+            margin: auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
     }
 </style>
 <!-- ==================================================================== -->
