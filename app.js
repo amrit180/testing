@@ -2,6 +2,7 @@
 var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
+require('dotenv').config();
 const connectDB = require('./models/connection');
 
 connectDB();
