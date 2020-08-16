@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const URI = "mongodb+srv://amritanshu:amritanshu@cluster0-wu5uz.gcp.mongodb.net/Webinar?retryWrites=true&w=majority";
+const URI = process.env.DATABASE_URL;
 
 const connectDB = async () => {
     await mongoose.connect(URI, {
