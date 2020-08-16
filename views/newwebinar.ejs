@@ -3,13 +3,67 @@
 <h1>Add Blog</h1>
 
 <form action="/webinars" method="POST">
+    <div class="container">
+        <div class="buts">
+            <input class="txtc" type="text" placeholder="Heading of Webinar" name="title">
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" placeholder="URL of Image" name="image">
+        </div>
+        <div class="but">
 
-    <input type="text" placeholder="Heading of Webinar" name="title">
-    <input type="text" placeholder="URL of Image" name="image">
-    <input type="text" placeholder="Description" name="description">
-    <button type="submit">Submit</button>
-
+            <input class="txtc" type="text" placeholder="Description" name="description">
+        </div>
+        <button class="btn button" type="submit">Submit</button>
+    </div>
 
 </form>
+<style>
+    .buts {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 
+    .but {
+        margin-bottom: 30px;
+    }
+
+    .txtc {
+        flex: 1;
+        padding: 18px 40px;
+        font-size: 16px;
+        color: orangered;
+        background: #ddd;
+        border: none;
+        font-weight: 700;
+        outline: none;
+
+        border-radius: 10px;
+        width: 100%;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button {
+        margin-left: 4%;
+        width: 200px;
+        height: 50px;
+        color: white;
+        font-size: 25px;
+        border-radius: 5px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button:hover {
+        color: black;
+        background-color: white;
+        font-weight: 700;
+    }
+</style>
 <%- include("partials/footer.ejs") %>

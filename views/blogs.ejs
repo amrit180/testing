@@ -15,12 +15,12 @@
       <span>June 12 2020</span>
     </div>
     <div class="blog-post-desc">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat.</p>
+      <p><%= blog.blogdescription.substring(0,150) %>...
+
+      </p>
+
     </div>
-    <a href="/blogs/<%= blog._id %>" class="blog-post-read-more">View Blog</a>
+    <a href="/blogs/<%= blog._id %>" class="blog-post-read-more">Read More!</a>
   </div>
 </div>
 

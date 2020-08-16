@@ -1,31 +1,81 @@
 <%- include("partials/header.ejs") %>
-<div class="container">
-    <div class="jumbotron class">
-        <h1 class="display-4"><%= blog.blogtitle %></h1>
-        <div class="container">
-            <img src="<%= blog.blogimage %>" class="imgblog">
+<div class="container-fluid" id="yy">
+
+    <div class="container-fluid">
+        <div class="emment">
+
+            <h1 class="display-4"><%= blog.blogtitle %></h1>
         </div>
-        <h3 class="h3tag"><%= blog.blogdescription %> </h3>
-        <% if(currentuser){ %>
-        <a href="/blogs/<%=blog._id %>/edit" class="btn btn-success" style="display: inline-block;">Edit Blog</a>
-        <form id="delete-form" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
-            <button class="btn btn-xs btn-danger">Delete</button>
-        </form>
-        <% } %>
+        <div class="imgsrc">
+            <div class="imgsrcc">
+
+                <img src="<%= blog.blogimage %>" class="imgblog">
+            </div>
+
+        </div>
+
+
     </div>
+
+    <h3 class="h3tag"><%= blog.blogdescription %>
+        <div> <img class="classintermediate" src="<%= blog.blogimage2 %>" alt="alt"></div>
+    </h3>
+    <% if(currentuser){ %>
+    <a href="/blogs/<%=blog._id %>/edit" class="btn btn-success" style="display: inline-block;">Edit Blog</a>
+    <form id="delete-form" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-xs btn-danger">Delete</button>
+    </form>
+    <% } %>
+
 </div>
 
 
 <style>
+    .classintermediate {
+
+        margin-left: 30%;
+        max-width: 600px;
+        max-height: 500px;
+    }
+
+    .imgsrcc {
+        background-image: linear-gradient(to right, rgba(58, 116, 108, 0.151), rgba(58, 116, 108, 0.251), rgb(58, 116, 108, 0.7));
+
+    }
+
+    .imgsrc {
+
+        background-image: linear-gradient(to right, rgba(58, 116, 108, 0.151), rgba(58, 116, 108, 0.251), rgb(58, 116, 108, 0.7));
+        clip-path: polygon(50% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0% 60%, 0 0);
+        height: 105vh;
+    }
+
+    #yy {
+        background-color: rgba(238, 255, 251, 0.712);
+    }
+
     .h3tag {
+        box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
         margin-top: 20px;
-        text-align: center;
-        border: 1px solid black;
+        margin-right: 20%;
+        margin-left: 20%;
+        font-size: 20px;
+
+        text-align: left;
+        background-color: rgba(238, 255, 251, 1);
     }
 
     .display-4 {
-        text-align: center;
-        border-bottom: black solid 2px;
+        margin-left: 5%;
+        margin-right: 10%;
+        text-align: left;
+        color: white;
+        position: absolute;
+        top: 62%;
+        z-index: 5;
+        text-shadow: 5px 5px 10px black;
+
+
     }
 
     .class {
@@ -35,10 +85,16 @@
         align-items: center;
     }
 
+
+
     .imgblog {
-        max-width: 50%;
-        max-height: 50%;
-        margin-left: 25%;
+        position: relative;
+        display: block;
+        z-index: -1;
+        clip-path: polygon(50% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0% 60%, 0 0);
+        width: 100%;
+        height: 100vh;
+
 
     }
 </style>
