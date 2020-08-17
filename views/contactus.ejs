@@ -1,0 +1,121 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+    <h1 class="h1as">Contact Us</h1>
+    <form action="https://formsubmit.co/v3webinar@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://www.v3webinar.com/">
+        <div class="but">
+            <label for="name">Name</label>
+            <input type="text" class="txta" name="user_name" id="name" placeholder="Name">
+        </div>
+        <div class="but">
+            <label for="mail">E-mail</label>
+            <input type="email" id="mail" class="txta" name="email" placeholder="Email Address">
+
+        </div>
+
+        <div class="but">
+            <label for="msg">Company Name</label>
+            <input type="text" class="txta" name="company-name" id="msg" placeholder="Company Name">
+        </div>
+        <div class="buted">
+            <input id="captcha" type="checkbox" name="_captcha" value="true">
+            <p style="color: white ;margin-top: 10%;">I'm not a robot</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/1200px-RecaptchaLogo.svg.png"
+                alt="alt" class="asdfgh">
+        </div>
+        <div class="butuon">
+
+            <button type="submit" class=" button btn">Submit</button>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_cc" value="ajit.buxi@venaliciumdigital.com">
+        </div>
+
+    </form>
+</div>
+<style>
+    .butuon {
+        margin-left: 30%;
+    }
+
+    .asdfgh {
+        height: 50px;
+        width: 50px;
+        margin-top: 10%;
+    }
+
+    #captcha {
+        height: 30px;
+        width: 30px;
+
+        margin: 20px;
+
+
+    }
+
+    .buted {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        margin-left: 24%;
+        margin-bottom: 30px;
+        margin-right: 40%;
+        background-color: rgba(95, 158, 160, 0.356);
+    }
+
+    .txta {
+        color: black;
+    }
+
+    .h1as {
+        text-align: center;
+    }
+
+    .but {
+        margin-bottom: 30px;
+    }
+
+    .button {
+        margin-left: 4%;
+        width: 200px;
+        height: 50px;
+        color: white;
+        font-size: 25px;
+        border-radius: 5px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button:hover {
+        color: black;
+        background-color: white;
+        font-weight: 700;
+    }
+
+    .txta {
+        flex: 1;
+        padding: 18px 40px;
+        font-size: 16px;
+        color: whitesmoke;
+        background: #ddd;
+        border: none;
+        font-weight: 700;
+        outline: none;
+        border-radius: 10px;
+        width: 100%;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        margin-top: 15%;
+    }
+</style>
+
+
+
+
+<%- include("partials/footer.ejs") %>
