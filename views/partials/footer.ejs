@@ -12,7 +12,7 @@
                 <a href="#"><i class="fab fa-youtube"></i></a>
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <form action="https://formsubmit.co/v3webinar@gmail.com" method="POST">
+            <form action="https://formsubmit.co/info@v3media.online" method="POST">
                 <input type="hidden" name="_next" value="https://www.v3webinar.com/">
                 <div class="but">
                     <label for="name">Name</label>
@@ -96,7 +96,11 @@
         </div>
         <div>
             <p class="rights-text">© 2020 All Rights Reserved.</p>
-            <p class="rights-text">Designed | Developed & Maintained by <a href="https://bili.co.in">Bili</a> </p>
+            <p class="rights-text" id="beta">Designed | Developed & Maintained by <a href="https://bili.co.in">Bili</a>
+            </p>
+            <p id="alpha" class="rights-text">Designed | Developed & Maintained by <br> <a
+                    href="https://bili.co.in">Bili</a>
+            </p>
         </div>
     </div>
 </footer>
@@ -104,6 +108,10 @@
 <!-- ================================================================= -->
 
 <style>
+    #alpha {
+        display: none;
+    }
+
     .but {
         margin-top: 10px;
         margin-bottom: 10px;
@@ -287,6 +295,7 @@
         justify-content: center;
     }
 
+    /* 
     @media (max-width:960px) {
         .footer-container {
             max-width: 600px;
@@ -309,10 +318,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
-    }
+    } */
 
 
-    @media (min-width: 400px) and (max-width:700px) {
+    @media (min-width: 600px) and (max-width:996px) {
         .btns {
             margin: 0;
             width: 100%;
@@ -321,53 +330,76 @@
 
         .footer-container {
             width: 100%;
-            margin: 0;
-            padding: 20px;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr !important;
+
+            margin: 0;
+
+
         }
 
         footer {
-            margin-top: 12%;
+            margin-top: 100px;
             background: black;
-            padding: 0;
+            padding-left: 5px;
         }
 
     }
 
-    @media (max-width: 400px) {
-        .footer-container {
-            width: 100%;
+    @media (min-width:400px) and (max-width:600px) {
+        .btns {
             margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr;
+            width: 100%;
+            margin-top: 20px;
         }
 
+        .footer-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr !important;
 
-        .fourth {
-            margin-left: 0;
+            margin: 0;
+
+
         }
 
         footer {
-            margin-top: 12%;
+            margin-top: 50px !important;
             background: black;
-            padding: 0;
+            padding-left: 5px;
         }
+    }
 
-        .third {
-            margin-left: 0;
-        }
-
-        .social-media {
+    @media (max-width:400px) {
+        .btns {
             margin: 0;
+            width: 100%;
+            margin-top: 20px;
         }
 
-        .margin {
-            margin-left: 0;
+        .footer-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr !important;
+
+            margin: 0;
+
+
         }
 
+        footer {
+            margin-top: 50px !important;
+            background: black;
+            padding-left: 5px;
+        }
 
+        #alpha {
+            display: block;
+        }
+
+        #beta {
+            display: none;
+        }
     }
 </style>
 <!-- ==================================================================== -->
