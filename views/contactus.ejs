@@ -1,38 +1,83 @@
 <%- include("partials/header.ejs") %>
-<div class="container">
-    <h1 class="h1as">Contact Us</h1>
-    <form action="https://formsubmit.co/v3webinar@gmail.com" method="POST">
-        <input type="hidden" name="_next" value="https://www.v3webinar.com/">
-        <div class="but">
-            <label for="name">Name</label>
-            <input type="text" class="txta" name="user_name" id="name" placeholder="Name">
-        </div>
-        <div class="but">
-            <label for="mail">E-mail</label>
-            <input type="email" id="mail" class="txta" name="email" placeholder="Email Address">
+<div class="back">
+    <div class="container">
+        <h1 class="h1as">Contact Us</h1>
+        <form action="https://formsubmit.co/v3webinar@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://www.v3webinar.com/">
+            <div class="gridname">
+                <div class="but aas">
+                    <!-- <label id="label" for="name">Name</label> -->
+                    <input type="text" class="aaa" name="user_name" id="name" placeholder="First Name">
+                </div>
+                <div class="but aas">
+                    <!-- <label id="label" for="name">Name</label> -->
+                    <input type="text" class="aaa" name="user_name" id="name" placeholder=" Last Name">
+                </div>
+            </div>
+            <div class="but">
+                <!-- <label id="label" for="mail">E-mail</label> -->
+                <input type="email" id="mail" class="aaa" name="email" placeholder="Email Address">
 
-        </div>
+            </div>
 
-        <div class="but">
-            <label for="msg">Company Name</label>
-            <input type="text" class="txta" name="company-name" id="msg" placeholder="Company Name">
-        </div>
-        <div class="buted">
-            <input id="captcha" type="checkbox" name="_captcha" value="true">
-            <p style="color: white ;margin-top: 10%;">I'm not a robot</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/1200px-RecaptchaLogo.svg.png"
-                alt="alt" class="asdfgh">
-        </div>
-        <div class="butuon">
+            <div class="but">
+                <!-- <label id="label" for="msg">Company Name</label> -->
+                <input type="text" class="aaa" name="company-name" id="msg" placeholder="Company Name">
+            </div>
+            <div class="buted">
+                <input id="captcha" type="checkbox" name="_captcha" value="true">
+                <p style="color: white ;margin-top: 10%;">I'm not a robot</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/1200px-RecaptchaLogo.svg.png"
+                    alt="alt" class="asdfgh">
+            </div>
+            <div class="butuon">
 
-            <button type="submit" class=" button btn">Submit</button>
-            <input type="hidden" name="_captcha" value="false">
-            <!-- <input type="hidden" name="_cc" value="ajit.buxi@venaliciumdigital.com"> -->
-        </div>
+                <button type="submit" class=" button btn">Submit</button>
+                <input type="hidden" name="_captcha" value="false">
+                <!-- <input type="hidden" name="_cc" value="ajit.buxi@venaliciumdigital.com"> -->
+            </div>
 
-    </form>
+        </form>
+    </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <style>
+    .gridname {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .aas {
+        margin-left: 5px;
+
+    }
+
+    body {
+        background-image: linear-gradient(to right, rgba(0, 153, 213, 0.356), rgba(53, 229, 176, 0.336)), url("/images/contact.jpg");
+        background-size: cover;
+        height: 70vh;
+
+        width: 100%;
+    }
+
+    #label {
+        color: black;
+    }
+
     .butuon {
         margin-left: 30%;
     }
@@ -57,15 +102,16 @@
         grid-template-columns: 1fr 3fr 1fr;
         margin-left: 24%;
         margin-bottom: 30px;
-        margin-right: 40%;
+        margin-right: 24%;
         background-color: rgba(95, 158, 160, 0.356);
     }
 
-    .txta {
+    .aaa {
         color: black;
     }
 
     .h1as {
+        color: gray;
         text-align: center;
     }
 
@@ -92,16 +138,17 @@
         font-weight: 700;
     }
 
-    .txta {
+    .aaa {
         flex: 1;
         padding: 18px 40px;
         font-size: 16px;
-        color: whitesmoke;
-        background: #ddd;
+        color: black;
+        background: transparent;
         border: none;
+        border-bottom: black solid 2px;
         font-weight: 700;
         outline: none;
-        border-radius: 10px;
+        padding-left: 5px;
         width: 100%;
 
 
@@ -111,7 +158,17 @@
     }
 
     .container {
+
+
+        background-color: whitesmoke;
         margin-top: 15%;
+        width: 40%;
+
+
+        padding-bottom: 50px;
+        padding-top: 50px;
+
+
     }
 </style>
 

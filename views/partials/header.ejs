@@ -32,7 +32,7 @@
       <a class="navbar-brand" href="/">
         <img src="/images/logo.png" alt="" loading="lazy" class="logos">
 
-        <span class="logo-header">V3 Webinar</span><span class="line">|</span>
+        <span class="logo-header" id="companyname">V3 Webinar</span><span class="line">|</span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,6 +53,8 @@
       </div>
     </nav>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
       .wrapper {
         min-height: 500px;
       }
@@ -94,5 +96,11 @@
         background-color: #f2f2f2;
         padding: 0 !important;
         margin: 0 !important;
+      }
+
+      #companyname {
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        color: grey;
       }
     </style>
