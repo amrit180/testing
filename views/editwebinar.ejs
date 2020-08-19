@@ -2,11 +2,11 @@
 
 <h1>Add Webinar</h1>
 
-<form action="/webinars" method="POST">
-    <form action="/webinars/<%= webinar._id %>?_method=PUT" method="POST">
+
+<form action="/webinars/<%= webinar._id %>?_method=PUT" method="POST">
     <input type="text" placeholder="Heading of Webinar" name="webinar[title]">
-    <input type="text" placeholder="URL of Image" name="webinar[image]">
-    <input type="text" placeholder="Description" name="webinar[description]">
+    <input type="text" placeholder="URL of Image" value="<%= webinar.image %>" name="webinar[image]">
+    <input type="text" placeholder="Description" value="<%= webinar.description %>" name="webinar[description]">
     <button type="submit">Submit</button>
 
 

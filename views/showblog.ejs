@@ -17,9 +17,140 @@
 
     </div>
 
-    <h3 class="h3tag"><%= blog.blogdescription %>
-        <div> <img class="classintermediate" src="<%= blog.blogimage2 %>" alt="alt"></div>
-    </h3>
+    <div class="content-image">
+        <img src="<%= blog.blogimage2 %>" style="width: 100%;">
+    </div>
+    <div class="content-base">
+        <h3><%= blog.blogdescription %> </h3>
+    </div>
+
+
+
+
+
+
+    <div class="content-base">
+        <h3><%= blog.content2 %> </h3>
+    </div>
+
+    <div class="content-heading">
+        <h3><%= blog.heading2 %> </h3>
+    </div>
+
+    <div class="content-image">
+        <img src="<%= blog.blogimage3 %>" style="width: 100%;">
+    </div>
+
+    <div class="content-base">
+        <h3><%= blog.content3 %> </h3>
+    </div>
+
+    <div class="content-image">
+        <img src="<%= blog.blogimage4 %>" style="width: 100%;">
+    </div>
+
+    <div class="content-base">
+        <h3><%= blog.content4 %> </h3>
+    </div>
+
+    <div class="content-image">
+        <img src="<%= blog.blogimage5 %>" style="width: 100%;">
+    </div>
+
+    <div class="content-heading">
+        <h3><%= blog.heading3 %> </h3>
+    </div>
+
+    <div class="content-base">
+        <h3><%= blog.content5 %> </h3>
+    </div>
+    <div class="content-image">
+        <img src="<%= blog.blogimage6 %>" style="width: 100%;">
+    </div>
+    <div class="content-base">
+        <h3><%= blog.content6 %> </h3>
+    </div>
+
+    <div class="content-image">
+        <img src="<%= blog.blogimage7 %>" style="width: 100%;">
+    </div>
+
+    <div class="content-heading">
+        <h3><%= blog.heading4 %> </h3>
+    </div>
+
+
+    <div class="content-base">
+        <h3><%= blog.content7 %> </h3>
+    </div>
+
+    <div class="content-image">
+        <img src="<%= blog.blogimage8 %>" style="width: 100%;">
+    </div>
+
+    <div class="content-base">
+        <h3><%= blog.content8 %> </h3>
+    </div>
+
+    <div class="content-image">
+        <img src="<%= blog.blogimage9 %>" style="width: 100%;">
+    </div>
+
+    <div class="content-heading">
+        <h3><%= blog.heading5 %> </h3>
+    </div>
+
+    <div class="content-image">
+        <img src="<%= blog.blogimage10 %>" style="width: 100%;">
+    </div>
+
+
+    <div class="content-base">
+        <h3><%= blog.content9 %> </h3>
+    </div>
+
+    <div class="content-image">
+        <img src="<%= blog.blogimage11 %>" style="width: 100%;">
+    </div>
+
+
+
+    <div class="content-base">
+        <h3><%= blog.content10 %> </h3>
+    </div>
+
+    <div class="content-image">
+        <img src="<%= blog.blogimage12 %>" style="width: 100%;">
+    </div>
+
+    <div class="content-heading">
+        <h3><%= blog.heading6 %> </h3>
+    </div>
+
+    <div class="content-image">
+        <img src="<%= blog.blogimage13 %>" style="width: 100%;">
+    </div>
+
+    <div class="content-base">
+        <h3><%= blog.content11 %> </h3>
+    </div>
+
+
+    <div class="content-image">
+        <img src="<%= blog.blogimage14 %>" style="width: 100%;">
+    </div>
+    <div class="content-base">
+        <h3><%= blog.content12 %> </h3>
+    </div>
+    <div class="content-base">
+        <h3><%= blog.content13 %> </h3>
+    </div>
+
+
+
+
+
+
     <% if(currentuser){ %>
     <a href="/blogs/<%=blog._id %>/edit" class="btn btn-success" style="display: inline-block;">Edit Blog</a>
     <form id="delete-form" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
@@ -27,10 +158,30 @@
     </form>
     <% } %>
 
+
 </div>
 
 
 <style>
+    /*  ==============================================================================================================*/
+    /* title */
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
+    /* heading */
+    @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;600&display=swap');
+    /* content */
+    @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+    /* ======================================================================================================= */
+    .content-base h3 {
+        font-family: 'Nunito', sans-serif;
+        font-size: 20px;
+    }
+
+    .content-heading {
+        font-family: 'Mukta', sans-serif;
+        font-size: 25px;
+    }
+
     .classintermediate {
 
         margin-left: 30%;
@@ -51,21 +202,13 @@
     }
 
     #yy {
-        background-color: rgba(238, 255, 251, 0.712);
+        background-color: white;
     }
 
-    .h3tag {
-        box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
-        margin-top: 20px;
-        margin-right: 20%;
-        margin-left: 20%;
-        font-size: 20px;
 
-        text-align: left;
-        background-color: rgba(238, 255, 251, 1);
-    }
 
     .display-4 {
+        font-family: 'Exo 2', sans-serif;
         margin-left: 5%;
         margin-right: 10%;
         text-align: left;

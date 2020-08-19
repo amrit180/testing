@@ -2,23 +2,156 @@
 
 <h1>Add Webinar</h1>
 
+<div class="overall">
+    <form action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
+        <div class="but">
+            <input type="text" class="txtc" placeholder="Heading of Webinar" value="<%= blog.blogtitle %>"
+                name="blog[blogtitle]">
+        </div>
+        <div class="but">
+            <input type="text" class="txtc" placeholder="URL of Image" value="<%= blog.blogimage %>"
+                name="blog[blogimage]">
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage2 %>" name="blog[blogimage2]">
+        </div>
+        <div class="but">
+            <textarea type="text" placeholder="Description"
+                name="blog[blogdescription]"><%= blog.blogdescription %></textarea>
+        </div>
 
-<form action="/blogs/<%= blog._id %>?_method=PUT" method="POST">
-    <div class="but">
-        <input type="text" placeholder="Heading of Webinar" value="<%= blog.blogtitle %>" name="blog[blogtitle]">
-    </div>
-    <div class="but">
-        <input type="text" placeholder="URL of Image" value="<%= blog.blogimage %>" name="blog[blogimage]">
-    </div>
-    <div class="but">
-        <input class="txtc" type="text" value="<%= blog.blogimage2 %>" name="blog[blogimage2]">
-    </div>
-    <div class="but">
-        <input type="text" placeholder="Description" value="<%= blog.blogdescription %>" name="blog[blogdescription]">
-    </div>
-    <button type="submit">Submit</button>
+        <!-- ====================================================== -->
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage3 %>" name="blog[blogimage3]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content2]"><%= blog.content2 %></textarea>
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage4 %>" name="blog[blogimage4]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content3]"><%= blog.content3 %></textarea>
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.heading2 %>" name="blog[heading2]">
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage5 %>" name="blog[blogimage5]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content4]"><%= blog.content4 %></textarea>
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage6 %>" name="blog[blogimage6]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content5]"><%= blog.content5 %></textarea>
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.heading3 %>" name="blog[heading3]">
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage7 %>" name="blog[blogimage7]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content6]"><%= blog.content6 %></textarea>
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage8 %>" name="blog[blogimage8]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content7]"><%= blog.content7 %></textarea>
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.heading4 %>" name="blog[heading4]">
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage9 %>" name="blog[blogimage9]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content8]"><%= blog.content8 %></textarea>
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage10 %>" name="blog[blogimage10]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content9]"><%= blog.content9 %></textarea>
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.heading5 %>" name="blog[heading5]">
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage11 %>" name="blog[blogimage11]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content10]"><%= blog.content10 %></textarea>
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage12 %>" name="blog[blogimage12]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content11]"><%= blog.content11 %></textarea>
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.heading6 %>" name="blog[heading6]">
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage13 %>" name="blog[blogimage13]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content12]"><%= blog.content12 %></textarea>
+        </div>
+        <div class="but">
+            <input class="txtc" type="text" value="<%= blog.blogimage14 %>" name="blog[blogimage14]">
+        </div>
+        <div class="but">
+            <textarea type="text" name="blog[content13]"><%= blog.content13 %></textarea>
+        </div>
 
 
-</form>
+        <!-- =========================================================== -->
+
+
+
+
+
+
+
+        <button type="submit">Submit</button>
+
+
+    </form>
+</div>
+
+<style>
+    .overall {
+        margin-top: 100px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 200px;
+    }
+
+    .txtc {
+        flex: 1;
+        padding: 18px 40px;
+        font-size: 16px;
+        color: orangered;
+        background: #ddd;
+        border: none;
+        font-weight: 700;
+        outline: none;
+
+        border-radius: 10px;
+        width: 100%;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
 
 <%- include("partials/footer.ejs") %>
